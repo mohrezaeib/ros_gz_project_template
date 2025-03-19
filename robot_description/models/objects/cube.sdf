@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<sdf version="1.8">
+  <model name="my_cube">
+    <!-- The model is not static, so it can move under physics -->
+    <static>false</static>
+
+    <link name="cube_link">
+
+      <!-- Visual element to display the cube in the simulator -->
+      <visual name="cube_visual">
+        <geometry>
+          <box>
+            <!-- X, Y, Z dimensions of the cube -->
+            <size>1 1 1</size>
+          </box>
+        </geometry>
+        <!-- Optional: specify material or color here -->
+        <!--
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+        -->
+      </visual>
+
+      <!-- Collision element so physics can interact with the cube -->
+      <collision name="cube_collision">
+        <geometry>
+          <box>
+            <!-- Must match the visual's size for correct collision behavior -->
+            <size>1 1 1</size>
+          </box>
+        </geometry>
+      </collision>
+
+    </link>
+  </model>
+</sdf>
